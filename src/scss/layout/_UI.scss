@@ -1,0 +1,46 @@
+
+body {
+    background-color: $negro;
+}
+
+.contenedor-estetica {
+    width: 100%;
+    flex-wrap: nowrap;
+    @include tablet {
+        height: 100vh; // vh = view x height. 100 hace que tome toda la ventana
+        @include grid(2, $separacion / 2);
+    }
+
+    .imagen {
+        height: 30rem;
+        background-image: url('../img/1.webp');
+        background-size: cover;
+        background-position: center center;
+        border-radius: 1rem;
+        @include tablet {
+            height: 120rem;
+        }
+    }
+}
+
+.app {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: $separacion / 2 0;
+    background-color: $negro;
+
+    .seccion {
+        display: none;
+        margin-top: $separacion / 2;
+    }
+}
+
+.mostrar-seccion {
+    display: block!important;
+}
+.header {
+    h1 {
+        font-weight: $bold;
+    }
+
+}
